@@ -12,9 +12,13 @@
   padding-inline: var(--px-base);
 }
 
+.py-base {
+  padding-block: var(--py-base);
+}
+
 @media (width >= 80em) {
   .container {
-    --max-width: 80rem;
+    max-width: 80rem;
   }
 
   .desktop-only {

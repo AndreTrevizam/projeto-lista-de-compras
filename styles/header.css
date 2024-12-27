@@ -1,0 +1,36 @@
+#logo {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+header {
+  & .back {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    & span {
+      font: var(--fw-medium) var(--fs-sm)/16px var(--ff-sans);
+      color: var(--color-brand);
+    }
+  }
+
+  & .title {
+    margin-top: 1rem;
+
+    & h1 {
+      font: var(--fw-bold) var(--fs-lg)/32px var(--ff-sans);
+      color: var(--content-primary);
+    }
+  }
+
+}
+
+@media (width >= 80em) {
+  #logo {
+    display: inherit;
+  }
+}
