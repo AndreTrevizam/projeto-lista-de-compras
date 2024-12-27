@@ -29,7 +29,7 @@ header {
 
 }
 
-@media (width >= 80em) {
+@media (width >= 39.188em) {
   #logo {
     display: inherit;
     margin-bottom: 3.875rem;

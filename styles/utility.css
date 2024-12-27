@@ -16,9 +16,9 @@
   padding-block: var(--py-base);
 }
 
-@media (width >= 80em) {
+@media (width >= 39.188em) {
   .container {
-    max-width: 80rem;
+    max-width: 39.188em;
   }
 
   .desktop-only {
