@@ -2,11 +2,26 @@ const taskInput = document.getElementById('item-name')
 const addTaskButton = document.getElementById('btn-add-task')
 const taskList = document.querySelector('ul')
 const emptyItem = document.querySelector('.item');
+const removedMessage = document.querySelector('.removed-item')
 
 // remove o primeiro li
 const firstLi = taskList.firstElementChild
 if (firstLi) {
   firstLi.style.display = 'none'
+}
+
+// função de notificação da task removida
+function showNotification(duration = 3000) {
+  if (removedMessage) {
+    removedMessage.style.display = 'flex'
+
+    setTimeout(() => {
+      removedMessage.style.display = 'none'
+    }, duration)
+
+  } else {
+    alert('Erro. Tente novamente mais tarde.')
+  }
 }
 
 function addNewItem(itemName) {
@@ -51,6 +66,9 @@ function addNewItem(itemName) {
   removeButton.addEventListener("click", (event) => {
     event.preventDefault()
     li.remove()
+
+    // ao clicar no botao vai aparecer uma div e sair logo depois
+    showNotification()
   })
 
   li.appendChild(taskContent)
